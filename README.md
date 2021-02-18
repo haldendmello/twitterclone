@@ -1,6 +1,10 @@
 # twitterclone
 
-#### python django with rest framework and reacct js .
+##### deployed on heroku 
+
+[heroku link](https://twitterclone-cs50.herokuapp.com/)
+
+#### Python Django rest framework and react js .
 
 ![Home Page](images/home.gif)
 
