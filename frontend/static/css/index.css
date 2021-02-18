@@ -1,0 +1,493 @@
+/* index css */
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* app css */
+
+body{
+    --twitter-color:#50b7f5;
+    --twitter-background:#e6ecf0;
+}
+
+.app{
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+
+
+/* Sidebar css */
+.sidebar{
+    border-right: 1px solid var(--twitter-background);
+    /* min-width: 250px; */
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.sidebar__twitterIcon{
+
+    color:var(--twitter-color);
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.sidebar__tweet{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;    /* inherit material ui property  */
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+
+
+}
+
+
+/* Sidebar Option css */
+.sidebarOption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.sidebarOption:hover{
+    background-color: #e8f5fe;
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+
+
+.sidebarOption > .MuiSvgIcon-root{
+    padding: 20px;
+}
+
+
+
+.sidebarOption > h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+.sidebarOption--active{
+    color: var(--twitter-color);
+}
+
+/* Feed  css */
+
+.feed{
+    flex: 1.0;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;  
+    overflow-y: scroll;     
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+/* hide scrollbar from chrom , safari and opera  */
+.feed::-webkit-scrollbar {
+    display: none;
+}
+/* hide scrollbar for IE ,Edge and firefox */
+
+.feed{
+    -ms-overflow-style:none; 
+    scrollbar-width: none;
+}
+ 
+
+.feed__header{
+    position: sticky;   
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 10px 15px;
+    display: flex;
+
+}
+
+.feed__header > h2 {
+    /* font-size: 20px;
+    font-weight: 800; */
+  
+}
+
+
+.menu_button{
+    padding-top: 7px;
+    padding-right: 10px;
+    display: none;
+}
+
+
+/* Tweetbox css */
+
+.tweetBox{
+    padding-bottom: 10px;
+    border-top: 1px solid var(--twitter-background) ;
+    border-left: 1px solid var(--twitter-background);
+    border-right: 1px solid var(--twitter-background);
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+    padding-left: 10px;
+
+    
+}
+
+.tweetBox > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetBox__input{
+    padding:20px;
+    display: flex;
+    position: relative;
+    
+
+}
+
+.tweetBox__input > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    height: 45px;
+    border: none;
+    width: 60px;
+} 
+
+.clear_text{
+    position: absolute !important;  
+    /* top: 0 !important;  */
+    right: 20px !important; 
+    z-index: 2 !important; 
+    transform: translateX(2px) !important; 
+}
+
+.tweetBox__tweetButton{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;    /* inherit material ui property  */
+    border-radius: 30px !important;
+    width: 80px;
+    height: 40px !important;
+    margin-left: auto !important;
+}
+
+/* Post CSS */
+
+.post{
+    display: flex;
+    align-items: flex-start ;
+    border-bottom: 1px solid var(--twitter-background);
+    border-top: 1px solid var(--twitter-background);
+    border-right: 1px solid var(--twitter-background);
+    border-left: 1px solid var(--twitter-background);
+    padding-bottom: 10px;
+}   
+
+.post__body{
+    flex: 1;
+    padding: 10px;
+
+}
+
+.post__footer{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.post__headerSpecial{
+    padding-left: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    color: grey;
+}
+
+
+.post__LikeButton{
+    display: flex;
+}
+
+.post__Like{
+    font-size: 15px;
+    font-weight: 500;
+    color: grey;
+    padding-left: 5px;
+}
+
+.post_edit{
+    float: right;
+}
+
+.post_avatar {
+    padding: 4px;
+  }
+
+
+/* Login css */
+
+.tweet__Login{
+    flex: 1.0;
+    text-align: center;
+}
+
+
+
+.twiterIcon__Login{
+    font-size: 45px !important;
+    color: var(--twitter-color); 
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.login_To{
+    font-size: 25px;
+    font-weight: 800;
+
+}
+
+.tweet__LoginForm{
+    padding-top: 15px;
+    
+}
+
+/* .login__Text{
+    width: 400px;
+} */
+
+.login__Submit{
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;    /* inherit material ui property  */
+    border-radius: 30px !important;
+    height: 50px !important;
+    width: 300px;
+    
+}
+
+.login__Username{
+    padding-bottom: 15px;
+}
+
+.login__Password{
+    padding-bottom: 15px;
+}
+
+
+
+/* Sign Up  css */
+
+.tweet__Signup{
+    flex: 1.0;
+    text-align: center;
+}
+
+
+.signup__Username{
+    padding-bottom: 15px;
+
+}
+
+.signup__Email{
+    padding-bottom: 15px;
+
+}
+
+.signup__Password{
+    padding-bottom: 15px;
+
+}
+
+.signup__ConPassword{
+    padding-bottom: 15px;
+
+}
+
+.tweet__SignupForm{
+    padding-top: 15px;
+    
+}
+
+
+
+
+
+/* Profile  css */
+
+
+.tweet__Profile{
+    flex: 1.0;
+    min-width: fit-content;  
+    overflow-y: scroll; 
+}
+
+/* hide scrollbar from chrom , safari and opera  */
+.tweet__Profile::-webkit-scrollbar {
+    display: none;
+}
+/* hide scrollbar for IE ,Edge and firefox */
+
+.tweet__Profile{
+    -ms-overflow-style:none; 
+    scrollbar-width: none;
+}
+
+.profile__Header{
+    position: relative;
+}
+
+.profile__Banner{
+    height: min(33vw, 200px);
+    background-color: var(--twitter-background);
+}
+
+
+.follow__Button{
+    border: 1px solid var(--twitter-color) !important; 
+    color: var(--twitter-color) !important;
+    border-radius: 30px !important;
+    float: right;
+    top: 10px ;
+    right: 20px;
+}
+
+.profile__Bio{
+    margin-top: 90px;
+}
+
+.profile__Bio{
+    padding-left: 15px;
+}
+
+.profile__UserName{
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 1.5rem;
+    margin-top: 3.8rem;
+}
+
+.profile__User{
+    font-size: 15px;
+    color: grey;
+}
+
+.profile__Joined{
+    font-size: 15px;
+    color: grey;
+}
+
+.profile__Follow{
+    display: flex;
+    padding-left: 15px;
+    color: grey;
+}
+
+.profile__Following{
+    padding-right: 12px;
+    color: grey;
+}
+
+
+
+.error_message{
+    text-align: center;
+    font-size: 5vw;
+}
+
+
+/* pagination css */
+.container{
+    display: flex;
+    list-style: none;
+}
+
+.page{
+	padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.disabled{
+    cursor: not-allowed;
+    
+}
+
+.active{
+	border: 2px solid #000;
+    font-weight: bold;
+}
+
+.previous{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.break{
+    padding: 10px;
+}
+
+.next{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* mobile responsive */
+
+
+
+@media only screen and (max-width: 660px) {
+ 
+    /* .sidebar{
+        display: none;
+    } */
+
+    .menu_button{
+        display: block;
+    }
+    
+
+  }     
